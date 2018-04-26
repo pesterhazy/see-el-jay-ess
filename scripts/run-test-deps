@@ -5,8 +5,14 @@ set -x
 
 rm -rf out
 
+if [[ "${1-}" == "--infer" ]]; then
+    infer=true
+else
+    infer=false
+fi
+
 clj -m cljs.main \
-    -t node -O advanced -co "{:verbose true}"\
+    -t node -O advanced -co "{:verbose true, :infer-externs $infer}"\
     -o out/bundle.js\
     -c my.core
 
