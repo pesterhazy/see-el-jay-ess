@@ -1,3 +1,8 @@
-(ns my.core)
+(ns my.core
+  (:require [goog.object]))
 
-(prn [:my.core])
+(let [obj #js {"alpha" #js {"beta" "works"}}]
+  (prn [:obj
+        obj
+        (-> obj (.-alpha) (.-beta))
+        (goog.object/getValueByKeys obj "alpha" "beta")]))
