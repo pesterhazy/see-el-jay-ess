@@ -9,7 +9,7 @@
   (prn [(some-> obj (.-very) (.-long))
         (goog.object/getValueByKeys obj "very" "long")]))
 
-(defn demo3 [^js/Date obj]
+(defn demo3 [^js/Object obj]
   (prn [(some-> obj (.-very) (.-long))
         (goog.object/getValueByKeys obj "very" "long")]))
 
