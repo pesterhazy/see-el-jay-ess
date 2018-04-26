@@ -3,20 +3,20 @@
 
 (defn demo [obj]
   (prn [(.-very obj)
-        (some-> obj (.-very) (.-long))
-        (goog.object/getValueByKeys obj "very" "long")]))
+        (some-> obj (.-very) (.-lengthy))
+        (goog.object/getValueByKeys obj "very" "lengthy")]))
 
 (defn demo2 [^js obj]
   (prn [(.-very obj)
-        (some-> obj (.-very) (.-long))
-        (goog.object/getValueByKeys obj "very" "long")]))
+        (some-> obj (.-very) (.-lengthy))
+        (goog.object/getValueByKeys obj "very" "lengthy")]))
 
 (defn demo3 [^js/Object obj]
   (prn [(.-very obj)
-        (some-> obj (.-very) (.-long))
-        (goog.object/getValueByKeys obj "very" "long")]))
+        (some-> obj (.-very) (.-lengthy))
+        (goog.object/getValueByKeys obj "very" "lengthy")]))
 
-(let [obj #js {"very" #js {"long" "ok"}}]
+(let [obj #js {"very" #js {"lengthy" "ok"}}]
   (prn obj)
   (println "demo")
   (demo obj)

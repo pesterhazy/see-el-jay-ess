@@ -3,7 +3,7 @@
 Expected output
 
 ```
-[#js {:long "ok"} "ok" "ok"]
+[#js {:lengthy "ok"} "ok" "ok"]
 ```
 
 Actual output
