@@ -1,8 +1,12 @@
 (ns my.core
   (:require [goog.object]))
 
-(let [obj #js {"alpha" #js {"beta" "works"}}]
-  (prn [:obj
+(defn demo [obj]
+  (prn [:demo-obj
         obj
-        (-> obj (.-alpha) (.-beta))
-        (goog.object/getValueByKeys obj "alpha" "beta")]))
+        (-> obj (.-very))
+        (some-> obj (.-very) (.-long))
+        (goog.object/getValueByKeys obj "very" "long")]))
+
+(let [obj #js {"very" #js {"long" "works"}}]
+  (demo obj))
