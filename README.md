@@ -3,18 +3,18 @@
 Expected output
 
 ```
-["ok" "ok"]
+[#js {:long "ok"} "ok" "ok"]
 ```
 
 Actual output
 
 ```
 demo
-[nil "ok"]
+[nil nil "ok"]
 demo2
-[nil "ok"]
+[nil nil "ok"]
 demo3
-[nil "ok"]
+[nil nil "ok"]
 ```
 
 ## Infering externs

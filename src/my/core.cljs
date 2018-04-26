@@ -2,15 +2,18 @@
   (:require [goog.object]))
 
 (defn demo [obj]
-  (prn [(some-> obj (.-very) (.-long))
+  (prn [(.-very obj)
+        (some-> obj (.-very) (.-long))
         (goog.object/getValueByKeys obj "very" "long")]))
 
 (defn demo2 [^js obj]
-  (prn [(some-> obj (.-very) (.-long))
+  (prn [(.-very obj)
+        (some-> obj (.-very) (.-long))
         (goog.object/getValueByKeys obj "very" "long")]))
 
 (defn demo3 [^js/Object obj]
-  (prn [(some-> obj (.-very) (.-long))
+  (prn [(.-very obj)
+        (some-> obj (.-very) (.-long))
         (goog.object/getValueByKeys obj "very" "long")]))
 
 (let [obj #js {"very" #js {"long" "ok"}}]
